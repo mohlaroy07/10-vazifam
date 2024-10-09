@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    {% for player in players %}
+
+    <div>{{ player.name }}</div>
+    <div>{{ player.last_name }}</div>
+    <div>{{ player.age }}</div>
+    <div>{{ player.team }}</div>
+
+    <br>
+
+    {% endfor %}
+
+    <hr>
+
+    <form method="post">{% csrf_token %}
+
+        O'yinchi ismi
+        <input type="text" name="oyinchi_ismi">
+        <br>
+        <br>
+        O'yinchi familiyasi
+        <input type="text" name="oyinchi_familiyasi">
+        <br>
+        <br>
+        O'yinchi yoshi
+        <input type="text" name="oyinchi_yoshi">
+        <br>
+        <br>Oyinchi jamoasi
+        <input type="number" name="oyinchi_jamoasi">
+        <br>
+        <br>
+        <button>Yuborish</button>
+    </form>
+
+</body>
+
+</html>

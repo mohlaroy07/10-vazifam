@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    {% for team in teams %}
+
+    <div>{{ team.name }}</div>
+    <div>{{ team.description }}</div>
+
+    <br>
+
+    {% endfor %}
+
+    <hr>
+
+    <form method="post">{% csrf_token %}
+
+        Jamoa nomi
+        <input type="text" name="jamoa_nomi">
+        <br>
+        <br>
+        Jamoa haqida
+        <input type="text" name="jamoa_haqida">
+        <br>
+        <br>
+        <button>Yuborish</button>    
+    </form>
+
+
+</body>
+
+</html>
